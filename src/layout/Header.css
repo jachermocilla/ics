@@ -1,0 +1,30 @@
+#layout-nav {
+  background-color: #354b7c;
+  height: 80px;
+}
+
+#layout-logo {
+  height: 80px;
+}
+
+#layout-nav-title {
+  margin-left: 10px;
+  color: #e6e6e6;
+  font-family: PT Serif, serif;
+  font-size: 1.6em;
+}
+
+
+.nav-link {
+  color: #e6e6e6 !important;
+  /* transition: ease-in-out 0.5s !important; */
+}
+
+.nav-link:hover {
+  color: #aaa9a9 !important;
+}
+
+
+.navbar-nav {
+  background-color: #5a74ad;
+}
