@@ -7,6 +7,12 @@
   height: 80px;
 }
 
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    visibility: collapse;
+  }
+}
+
 #layout-nav-title {
   margin-left: 10px;
   color: #e6e6e6;
@@ -26,5 +32,5 @@
 
 
 .navbar-nav {
-  background-color: #5a74ad;
+  /* background-color: #5a74ad; */
 }
