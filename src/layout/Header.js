@@ -8,7 +8,8 @@ export default function Header() {
     <Navbar id="layout-nav" collapseOnSelect expand="lg">
       <Navbar.Brand href="/">
         <img id="layout-logo" src="/ics-logo.png" />
-            <span id="layout-nav-title" className="hide-on-mobile">Institute of Computer Science</span>
+        <span className="layout-nav-title hide-on-desktop show-on-mobile">ICS</span>
+        <span className="layout-nav-title hide-on-mobile">Institute of Computer Science</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,10 +27,16 @@ export default function Header() {
           <Nav.Link href="#pricing">Divisions</Nav.Link> */}
         </Nav>
         <Nav>
-          <Nav.Link href="#deets">More deets</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
-            Dank memes
-          </Nav.Link>
+          <NavDropdown title="Academic Programs" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/1.1">BS Computer Science</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/1.2">MS Computer Science</NavDropdown.Item>
+            <NavDropdown.Item href="#action/1.3">MIT Information Technology</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/1.4">PhD Computer Science</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link eventKey={2} href="/">Research</Nav.Link>
+          <Nav.Link eventKey={2} href="/">Divisions</Nav.Link>
         </Nav>
       </Navbar.Collapse>
 
