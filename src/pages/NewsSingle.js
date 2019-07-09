@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './News.css';
 
-// import newsMD from '../md/News.md';
-// import newsMD from '/md/News.md';
-
-export default class News extends Component {
+export default class NewsSingle extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      markdown: ''
+      markdown: '',
+      date: this.props.match.params.date
     }
   }
 
   componentWillMount() {
-    // console.log('File path: ' + newsMD)
-
-    fetch('/md/News.txt')
+    fetch(`/md/News/${this.state.date}.md`)
       .then(response => response.clone().text())
       .then(content => {
-        this.setState({ markdown: content })
+        if (content.substring(0,9) === "<!DOCTYPE") {
+          this.setState({ markdown: '# Page Not Found' })
+        }
+
+        else {
+          this.setState({ markdown: content })
+        }
       })
   }
 

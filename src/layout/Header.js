@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <Navbar id="layout-nav" collapseOnSelect expand="lg">
       <Navbar.Brand href="/">
-        <img id="layout-logo" src="/ics-logo.png" />
+        <img id="layout-logo" src="/ics-logo.png" alt="ics-log" />
         <span className="layout-nav-title hide-on-desktop show-on-mobile">ICS</span>
         <span className="layout-nav-title hide-on-mobile">Institute of Computer Science</span>
       </Navbar.Brand>
