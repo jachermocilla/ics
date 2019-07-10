@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './News.css';
 
+import Breadcrumbs from '../layout/Breadcrumbs';
+
 export default class NewsSingle extends Component {
 
   constructor(props) {
@@ -28,7 +30,8 @@ export default class NewsSingle extends Component {
 
   render() {
     return (
-      <div>
+      <div className="news-single">
+        <Breadcrumbs crumbs={[{ text: 'News Feed', link: '/newsfeed'}]}/>
         <ReactMarkdown source={this.state.markdown} />
       </div>
     )
