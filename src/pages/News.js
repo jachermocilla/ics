@@ -28,7 +28,7 @@ export default class News extends Component {
   render() {
     return (
       <div>
-        <Breadcrumbs crumbs={[]}/>
+        <Breadcrumbs crumbs={[{ text: 'News Feed' }]}/>
         <ReactMarkdown source={this.state.markdown} />
       </div>
     )
