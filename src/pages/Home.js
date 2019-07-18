@@ -1,8 +1,11 @@
 import React from 'react';
 // import './Home.css';
 
-export default function Home() {
-  return (
-    <div>Home</div>
-  )
+export default function Home(props) {
+
+ return (
+   <div>Home</div>
+ )
 }
+
+// const newsList = (props) =>

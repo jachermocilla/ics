@@ -1,35 +1,40 @@
 import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
 import './News.css';
 import Breadcrumbs from '../layout/Breadcrumbs';
-
-// import newsMD from '../md/News.md';
-// import newsMD from '/md/News.md';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default class News extends Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      markdown: ''
-    }
-  }
-
-  componentWillMount() {
-    // console.log('File path: ' + newsMD)
-
-    fetch('/md/News.txt')
-      .then(response => response.clone().text())
-      .then(content => {
-        this.setState({ markdown: content })
-      })
-  }
 
   render() {
     return (
       <div>
         <Breadcrumbs crumbs={[{ text: 'News Feed' }]}/>
-        <ReactMarkdown source={this.state.markdown} />
+
+        {
+          this.props.newsData ?
+            this.props.newsData.map((n, i) => {
+              return (
+                <div key={i} className="newsfeed-item">
+                  <h2><a href={`/news/${n.filename}`}>{n.title}</a></h2>
+                  <span className="newsfeed-item-date">{n.date}</span>
+                  <span> | </span>
+                  <span>Published by <a href={n.profileURL}>{n.author}</a></span>
+                  <br /> <br />
+                  <Container>
+                    <Row>
+                      <Col xs={12} lg={2}><img style={{ width: '100%', height: 'auto' }} src={n.imageURL} alt={n.imageAlt} /></Col>
+                      <Col xs={12} lg={10}><p>{n.summary} <a href={`/news/${n.filename}`}>Read More</a></p></Col>
+                    </Row>
+                  </Container>
+                  <hr />
+                </div>
+              )
+            })
+            :
+            'Nothing to show'
+        }
+
+        {/* pagination */}
       </div>
     )
   }

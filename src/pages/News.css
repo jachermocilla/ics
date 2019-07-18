@@ -1,3 +1,7 @@
 .news-single img {
   width: 100%;
 }
+
+.newsfeed-item-date {
+  font-style: italic;
+}

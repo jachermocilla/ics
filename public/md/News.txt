@@ -1,5 +1,0 @@
-Sample Title
-============
-
-
-Sample Paragraph. In the public/ folder

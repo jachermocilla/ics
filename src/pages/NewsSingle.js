@@ -31,7 +31,7 @@ export default class NewsSingle extends Component {
   render() {
     return (
       <div className="news-single">
-        <Breadcrumbs crumbs={[{ text: 'News Feed', link: '/newsfeed'}]}/>
+        <Breadcrumbs crumbs={[{ text: 'News Feed', link: '/newsfeed'}, { text: this.state.date }]}/>
         <ReactMarkdown source={this.state.markdown} />
       </div>
     )
