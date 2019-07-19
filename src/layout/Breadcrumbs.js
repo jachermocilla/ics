@@ -8,7 +8,7 @@ export default function Breadcrumbs(props) {
       <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
       {
         props.crumbs.map((c,i) => {
-          if (i == props.crumbs.length - 1) {
+          if (i === props.crumbs.length - 1) {
             return <Breadcrumb.Item active key={i}>{c.text}</Breadcrumb.Item>
           }
           else {

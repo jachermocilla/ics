@@ -47,8 +47,7 @@ export default class App extends Component {
                   <Route
                     path="/"
                     exact={true}
-                    newsData={newsData}
-                    component={Home} />
+                    component={() => <Home newsData={newsData} /> } />
 
                   <Route
                     path="/newsfeed"

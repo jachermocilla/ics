@@ -27,16 +27,19 @@ export default function Header() {
           <Nav.Link href="#pricing">Divisions</Nav.Link> */}
         </Nav>
         <Nav>
-          <NavDropdown title="Academic Programs" id="collasible-nav-dropdown">
+          {/* <NavDropdown title="Academic Programs" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/1.1">BS Computer Science</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/1.2">MS Computer Science</NavDropdown.Item>
             <NavDropdown.Item href="#action/1.3">MIT Information Technology</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/1.4">PhD Computer Science</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
+          <Nav.Link eventKey={1} href="/">Academic Programs</Nav.Link>
           <Nav.Link eventKey={2} href="/">Research</Nav.Link>
-          <Nav.Link eventKey={2} href="/">Divisions</Nav.Link>
+          <Nav.Link eventKey={3} href="/">Faculty</Nav.Link>
+          <Nav.Link eventKey={4} href="/">About</Nav.Link>
+
         </Nav>
       </Navbar.Collapse>
 
