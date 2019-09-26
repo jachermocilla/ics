@@ -1,0 +1,8 @@
+version: '2.1'
+services:
+  frontend:
+    build: ./
+    ports:
+      - "12869:3000"
+    volumes:
+      - ./:/usr/src/app
